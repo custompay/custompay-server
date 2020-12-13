@@ -67,10 +67,10 @@ routes.post('/accounts/:id/cards', (request, response) => {
 });
 
 routes.post('/purchases', async (request, response) => {
-  // const { data, status } = await api.post('/purchases');
-  const { statusCode } = request;
+  const { status } = request;
+  // const result = await api.post('/purchases')
 
-  if (statusCode === 200) {
+  if (status === 200) {
     return response.json({
       message: "Operação realizada com sucesso.",
       code: 0,
@@ -80,7 +80,7 @@ routes.post('/purchases', async (request, response) => {
         currency_code: 986
       }
     });
-  } else if (statusCode === 400) {
+  } else if (status === 400) {
     return response.json({
       message: "Saldo insuficiente.",
       balance: {
@@ -89,7 +89,7 @@ routes.post('/purchases', async (request, response) => {
       },
       code: 530
     });
-  } else if (statusCode === 483) {
+  } else if (status === 483) {
     return response.json({
       message: "MCC Inválido para este cartão.",
       code: 434
