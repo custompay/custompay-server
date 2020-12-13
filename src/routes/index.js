@@ -3,22 +3,25 @@ const path = require('path');
 const fs = require('fs');
 
 const api = require('../services/api');
-const cards = path.resolve(__dirname, '..', '..', 'virtualCard.json');
+
+const authorizationId = require('../functions/authorizationId');
+const cards = path.resolve(__dirname, '..', 'database', 'virtualCard.json');
 
 const routes = Router();
 
-const authorizationId = () => {
-  let random;
-
-  do {
-    random = Math.floor(Math.random() * 1000) * Math.floor(Math.random() * 1000);
-  } while (random < 100000 && random < 999999);
-
-  return random;
-};
-
 routes.get('/', (request, response) =>
-  response.json({ message: "Sistema Ativo" }));
+  response.json({
+    message: "Sistema Ativo",
+    rotas: [
+      "/status",
+      "/saudeapi",
+      "/accounts/:id/cards",
+      "/purchases",
+      "/purchases/cancel",
+      "/chargebacks",
+    ],
+    repositório: "https://github.com/custompay/custompay-server"
+  }));
 
 routes.get('/status', (request, response) => {
   const status = request.res.statusCode;
@@ -44,6 +47,20 @@ routes.get('/status', (request, response) => {
     }
   }
 });
+
+routes.get('/saudeapi', (request, response) => {
+  try {
+    const saudeApi = api.get('/status')
+      .then(result => result.data)
+      .catch(error => error);
+
+    return response.status(200).json(saudeApi);
+  } catch (error) {
+    return response.status(error.status)
+      .json({ message: error.message });
+  }
+
+})
 
 routes.post('/accounts/:id/cards', (request, response) => {
   const data = request.body;
@@ -82,7 +99,7 @@ routes.post('/purchases', async (request, response) => {
       return response.status(200).json({
         message: "Operação realizada com sucesso.",
         code: 0,
-        authorization_id: 123456,
+        authorization_id: authorizationId(),
         balance: {
           amount: 123,
           currency_code: 986
@@ -146,7 +163,7 @@ routes.post('/purchases/cancel', async (request, response) => {
       return response.status(200).json({
         message: "Operação realizada com sucesso.",
         code: 0,
-        authorization_id: 123456,
+        authorization_id: authorizationId(),
         balance: {
           amount: 123,
           currency_code: 986
@@ -200,7 +217,7 @@ routes.post('/chargebacks', async (request, response) => {
       return response.status(200).json({
         message: "Operação realizada com sucesso.",
         code: 0,
-        authorization_id: 123456,
+        authorization_id: authorizationId(),
         balance: {
           amount: 123,
           currency_code: 986
