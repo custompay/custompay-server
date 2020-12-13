@@ -2,7 +2,9 @@
    <img src="./assets/logo.jpeg" alt="Happy" width="280"/>
 </p>
 
-Descrição
+Um aplicativo que funciona como uma carteira digital, aonde cada usuário poderá fazer a gestão dos seus gastos e dividir as compras em e-commerce de vestuário entre os diferentes cartões que eles já possuem.
+
+A CustomPay permite realizar pagamentos via QrCode, sem a necessidade dos cartões físicos, além de garantir facilidade e comodidade aos usuários por disponibilizar o controle das suas despesas em um único lugar.
 
 <div align="center">
   <sub>Built by
@@ -14,8 +16,6 @@ Descrição
 
 * [Tecnologias](#computer-tecnologias)
 * [Funcionalidades](#rocket-funcionalidades)
-* [Repositórios](#computer-Repositórios)
-* [Equipe](#equipe)
 * [License](#closed_book-license)
 * [Equipe](#bulb-Equipe)
 
@@ -23,14 +23,14 @@ Descrição
 
 ## 📥 Layout disponivel em:  
 <p align="center">
-    <a title=".fig Mobile  href="https://www.figma.com/file/Mp1F0M7ELfmhLO4lrW14mo/PaySmart?node-id=0%3A1">
-         <img alt="Figma" src="https://img.shields.io/badge/Versão Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
+    <a title=".fig Mobile" href="https://www.figma.com/file/Mp1F0M7ELfmhLO4lrW14mo/PaySmart?node-id=0%3A1">
+        <img alt="Figma" src="https://img.shields.io/badge/Versão Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
     </a>
 </p>
 
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
-   <img src="./assets//mockup2.jpeg" width="360">
+   <img src="./assets/conjuntoMockup.jpeg" width="360">
 </div>
 
 
@@ -45,9 +45,9 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 
 # :rocket: Funcionalidades
 
-- Func 1.
+- Realizar pagamentos via QR code em e-commerces garantindo facilidade e flexibilidade.
 
-- Func 2.
+- Controle das despesas de todos os cartões em um único lugar.
 
 
 # :bulb: Equipe
