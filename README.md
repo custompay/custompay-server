@@ -23,8 +23,8 @@ Descrição
 
 ## 📥 Layout disponivel em:  
 <p align="center">
-    <a title=".fig Mobile "https://www.figma.com/file/Mp1F0M7ELfmhLO4lrW14mo/PaySmart?node-id=0%3A1">
-        <img alt="Figma" src="https://img.shields.io/badge/Versão Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
+    <a title=".fig Mobile  href="https://www.figma.com/file/Mp1F0M7ELfmhLO4lrW14mo/PaySmart?node-id=0%3A1">
+         <img alt="Figma" src="https://img.shields.io/badge/Versão Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
     </a>
 </p>
 
