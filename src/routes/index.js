@@ -70,6 +70,8 @@ routes.post('/purchases', async (request, response) => {
   const { status } = request;
   // const result = await api.post('/purchases')
 
+  // console.log(result.data, result.status);
+
   if (status === 200) {
     return response.json({
       message: "Operação realizada com sucesso.",
@@ -97,7 +99,8 @@ routes.post('/purchases', async (request, response) => {
   } else {
     return response.json({
       message: "Não foi possível executar comando. Erro desconhecido.",
-      code: 999
+      code: 999, 
+      status
     });
   }
 });
