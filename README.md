@@ -30,7 +30,7 @@ Descrição
 
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
-   <img src="./assets//mockup2.jpeg" width="360">
+   <img src="./assets/conjuntoMockup.jpeg" width="360">
 </div>
 
 
