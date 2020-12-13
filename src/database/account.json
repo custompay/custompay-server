@@ -1,0 +1,31 @@
+[
+  {
+    "resultData": {
+      "resultCode": 0,
+      "resultDescription": "Comando concluído com sucesso",
+      "psResponseId": "fdba3944-081e-4011-8279-22e565ad5284"
+    },
+    "account": {
+      "accountId": "cta-93724070-1aa2-4871-846d-3a5025850d16",
+      "psProductCode": "{product}",
+      "psProductName": "EQUIPE KAPPA PESSOA FISICA NACIONAL",
+      "issuerAccountId": "-",
+      "accountOwner": {
+        "fullName": "Joao Marques",
+        "identityDocumentNumber": "11893144122",
+        "otherIdentityDocumentNumber": null,
+        "motherName": "-",
+        "contactInformation": {
+          "personalPhoneNumber1": "+5551912345678",
+          "personalPhoneNumber2": null,
+          "comercialPhoneNumber1": null,
+          "email": "joao.gomess@gmail.com"
+        },
+        "occupationInfo": null
+      },
+      "cards": [],
+      "status": "Ativa",
+      "inclusion_date": "2020-12-13T03:55:18.736Z"
+    }
+  }
+]
