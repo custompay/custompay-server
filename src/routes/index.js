@@ -18,22 +18,22 @@ const authorizationId = () => {
 };
 
 routes.get('/', (request, response) =>
-  response.json({ message: "Hello World!" }));
+  response.json({ message: "Sistema Ativo" }));
 
 routes.get('/status', async (request, response) => {
   try {
-    return response.json({
+    return response.status(200).json({
       message: "Operação realizada com sucesso.",
       code: 0,
-    }).status(200);
+    });
   } catch (error) {
     if (error.statusCode == 503) {
-      return response.json({
+      return response.status(503).json({
         message: "Sistema indisponível. Erro ao acessar base de dados.",
         code: 900
-      }).status(503);
+      });
     } else {
-      return response.json({
+      return response.status(400).json({
         message: "Não foi possível executar comando. Erro desconhecido.",
         code: 999,
       });
@@ -50,7 +50,7 @@ routes.post('/accounts/:id/cards', (request, response) => {
     newCards.push(data);
     fs.writeFileSync(cards, JSON.stringify(newCards));
 
-    return response.json({
+    return response.status(200).json({
       resultData: {
         resultCode: 0,
         resultDescription: "Comando concluído com sucesso",
@@ -72,7 +72,7 @@ routes.post('/accounts/:id/cards', (request, response) => {
 
 routes.post('/purchases', async (request, response) => {
   try {
-    return response.json({
+    return response.status(200).json({
       message: "Operação realizada com sucesso.",
       code: 0,
       authorization_id: 123456,
@@ -80,48 +80,49 @@ routes.post('/purchases', async (request, response) => {
         amount: 123,
         currency_code: 986
       }
-    }).status(200);
+    });
   } catch (error) {
+    console.log(error)
     if (error.statusCode == 400) {
-      return response.json({
+      return response.status(400).json({
         message: "Saldo insuficiente.",
         balance: {
           amount: 123,
           currency_code: 986
         },
         code: 530
-      }).status(412);
+      });
     } else if (error.statusCode == 404) {
-      return response.json({
+      return response.status(404).json({
         message: "Número único de conta não encontrado.",
         code: 111
-      }).status(404);
+      });
     } if (error.statusCode == 412) {
-      return response.json({
+      return response.status(412).json({
         message: "Saldo insuficiente.",
         balance: {
           amount: 123,
           currency_code: 986
         },
         code: 530
-      }).status(412);
+      });
     } else if (error.statusCode == 483) {
-      return response.json({
+      return response.status(483).json({
         message: "MCC Inválido para este cartão.",
         code: 434
-      }).status(483);
+      });
     } else if (error.statusCode == 499) {
-      return response.json({
+      return response.status(499).json({
         message: "Mensagem de negação recebida.",
         code: 499
-      }).status(499);
+      });
     } else if (error.statusCode == 503) {
-      return response.json({
+      return response.status(503).json({
         message: "Sistema indisponível. Erro ao acessar base de dados.",
         code: 900
-      }).status(503);
+      });
     } else {
-      return response.json({
+      return response.status(400).json({
         message: "Não foi possível executar comando. Erro desconhecido.",
         code: 999,
       });
@@ -131,7 +132,7 @@ routes.post('/purchases', async (request, response) => {
 
 routes.post('/purchases/cancel', async (request, response) => {
   try {
-    return response.json({
+    return response.status(200).json({
       message: "Operação realizada com sucesso.",
       code: 0,
       authorization_id: 123456,
@@ -139,39 +140,39 @@ routes.post('/purchases/cancel', async (request, response) => {
         amount: 123,
         currency_code: 986
       }
-    }).status(200);
+    });
   } catch (error) {
     if (error.statusCode == 404) {
-      return response.json({
+      return response.status(404).json({
         message: "Número único de conta não encontrado.",
         code: 111
-      }).status(404);
+      });
     } else if (error.statusCode == 409) {
-      return response.json({
+      return response.status(409).json({
         message: "Transação já cancelada.",
         code: 144
-      }).status(409);
+      });
     } else if (error.statusCode == 412) {
-      return response.json({
+      return response.status(412).json({
         message: "Saldo insuficiente.",
         balance: {
           amount: 123,
           currency_code: 986
         },
         code: 530
-      }).status(412);
+      });
     } else if (error.statusCode == 499) {
-      return response.json({
+      return response.status(499).json({
         message: "Mensagem de negação recebida.",
         code: 499
-      }).status(499);
+      });
     } else if (error.statusCode == 503) {
-      return response.json({
+      return response.status(503).json({
         message: "Sistema indisponível. Erro ao acessar base de dados.",
         code: 900
-      }).status(503);
+      });
     } else {
-      return response.json({
+      return response.status(400).json({
         message: "Não foi possível executar comando. Erro desconhecido.",
         code: 999,
       });
@@ -181,7 +182,7 @@ routes.post('/purchases/cancel', async (request, response) => {
 
 routes.post('/chargebacks', async (request, response) => {
   try {
-    return response.json({
+    return response.status(200).json({
       message: "Operação realizada com sucesso.",
       code: 0,
       authorization_id: 123456,
@@ -189,34 +190,34 @@ routes.post('/chargebacks', async (request, response) => {
         amount: 123,
         currency_code: 986
       }
-    }).status(200);
+    });
   } catch (error) {
     if (error.statusCode == 404) {
-      return response.json({
+      return response.status(404).json({
         message: "Número único de conta não encontrado.",
         code: 111
-      }).status(404);
+      });
     } else if (error.statusCode == 412) {
-      return response.json({
+      return response.status(412).json({
         message: "Saldo insuficiente.",
         balance: {
           amount: 123,
           currency_code: 986
         },
         code: 530
-      }).status(412);
+      });
     } else if (error.statusCode == 499) {
-      return response.json({
+      return response.status(499).json({
         message: "Mensagem de negação recebida.",
         code: 499
-      }).status(499);
+      });
     } else if (error.statusCode == 503) {
-      return response.json({
+      return response.status(403).json({
         message: "Sistema indisponível. Erro ao acessar base de dados.",
         code: 900
-      }).status(503);
+      });
     } else {
-      return response.json({
+      return response.status(400).json({
         message: "Não foi possível executar comando. Erro desconhecido.",
         code: 999,
       });
