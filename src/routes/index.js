@@ -68,9 +68,6 @@ routes.post('/accounts/:id/cards', (request, response) => {
 
 routes.post('/purchases', async (request, response) => {
   try {
-    // const result = await api.post('/purchases')
-
-    // console.log(result.data, result.status);
     return response.json({
       message: "Operação realizada com sucesso.",
       code: 0,
@@ -81,7 +78,7 @@ routes.post('/purchases', async (request, response) => {
       }
     }).status(200);
   } catch (error) {
-    if (error.statusCode == 400) {
+    if (error.statusCode == 412) {
       return response.json({
         message: "Saldo insuficiente.",
         balance: {
