@@ -2,7 +2,9 @@
    <img src="./assets/logo.jpeg" alt="Happy" width="280"/>
 </p>
 
-Descrição
+Um aplicativo que funciona como uma carteira digital, aonde cada usuário poderá fazer a gestão dos seus gastos e dividir as compras em e-commerce de vestuário entre os diferentes cartões que eles já possuem.
+
+A CustomPay permite realizar pagamentos via QrCode, sem a necessidade dos cartões físicos, além de garantir facilidade e comodidade aos usuários por disponibilizar o controle das suas despesas em um único lugar.
 
 <div align="center">
   <sub>Built by
