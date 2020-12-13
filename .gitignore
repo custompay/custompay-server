@@ -105,7 +105,3 @@ dist
 
 # Script Curl
 curl.txt
-
-# Credentials json
-account.json
-virtualCard.json
