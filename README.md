@@ -23,7 +23,7 @@ Descrição
 
 ## 📥 Layout disponivel em:  
 <p align="center">
-    <a title=".fig Mobile" href="https://www.figma.com/file/COuTfekgKpb2bBdkCH9gVe/Casa-Optimize?node-id=0%3A1">
+    <a title=".fig Mobile" href="https://www.figma.com/file/Mp1F0M7ELfmhLO4lrW14mo/PaySmart?node-id=0%3A1">
         <img alt="Figma" src="https://img.shields.io/badge/Versão Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
     </a>
 </p>
@@ -45,9 +45,9 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 
 # :rocket: Funcionalidades
 
-- Func 1.
+- Realizar pagamentos via QR code em e-commerces garantindo facilidade e flexibilidade.
 
-- Func 2.
+- Controle das despesas de todos os cartões em um único lugar.
 
 
 # :bulb: Equipe
