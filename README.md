@@ -16,8 +16,6 @@ A CustomPay permite realizar pagamentos via QrCode, sem a necessidade dos cartõ
 
 * [Tecnologias](#computer-tecnologias)
 * [Funcionalidades](#rocket-funcionalidades)
-* [Repositórios](#computer-Repositórios)
-* [Equipe](#equipe)
 * [License](#closed_book-license)
 * [Equipe](#bulb-Equipe)
 
