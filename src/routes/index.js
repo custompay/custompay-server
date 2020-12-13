@@ -20,8 +20,8 @@ const authorizationId = () => {
 routes.get('/', (request, response) =>
   response.json({ message: "Sistema Ativo" }));
 
-routes.get('/status', async (request, response) => {
-  const status = request.status;
+routes.get('/status', (request, response) => {
+  const status = request.res.statusCode;
 
   try {
     if (status == 200)
@@ -75,7 +75,7 @@ routes.post('/accounts/:id/cards', (request, response) => {
 });
 
 routes.post('/purchases', async (request, response) => {
-  const status = request.status;
+  const status = request.res.statusCode;
 
   try {
     if (status == 200)
@@ -139,7 +139,7 @@ routes.post('/purchases', async (request, response) => {
 });
 
 routes.post('/purchases/cancel', async (request, response) => {
-  const status = request.status;
+  const status = request.res.statusCode;
 
   try {
     if (status == 200)
@@ -193,7 +193,7 @@ routes.post('/purchases/cancel', async (request, response) => {
 });
 
 routes.post('/chargebacks', async (request, response) => {
-  const status = request.status;
+  const status = request.res.statusCode;
 
   try {
     if (status == 200)
