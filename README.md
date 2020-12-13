@@ -40,7 +40,12 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
   <summary>Mobile</summary>
 
 -   [VS Code](https://code.visualstudio.com/)
-
+-   [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+-   [NodeJs](https://nodejs.org/en/)
+-   [ExpressJs](https://expressjs.com/pt-br/)
+-   [Api PaySmart (Processadora Leve)](https://paysmart-api.gitlab.io/processadora/spec/)
+-   [Serviço Cloud](https://www.heroku.com/)
+-   [Insomnia](https://insomnia.rest/)
 </details>
 
 # :rocket: Funcionalidades
